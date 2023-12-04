@@ -33,7 +33,60 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Hanif\",\n    \"birthDate\": \"2016-03-01\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/customers",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 04 Dec 2023 09:49:40 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Success created\",\n    \"data\": {\n        \"id\": 10,\n        \"name\": \"Hanif\",\n        \"birthDate\": \"2016-03-01T00:00:00.000+00:00\",\n        \"age\": 7\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "get all",
@@ -56,7 +109,57 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "get all",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/customers?size=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customers"
+									],
+									"query": [
+										{
+											"key": "size",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 04 Dec 2023 09:50:18 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Riza Dwi\",\n            \"birthDate\": \"2001-05-01T17:00:00.000+00:00\",\n            \"age\": 22\n        }\n    ],\n    \"totalPage\": 8\n}"
+						}
+					]
 				},
 				{
 					"name": "get detail",
@@ -64,17 +167,62 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/customers/2",
+							"raw": "{{url}}/customers/1",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"customers",
-								"2"
+								"1"
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "get detail",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/customers/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customers",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 04 Dec 2023 09:50:45 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Riza Dwi\",\n        \"birthDate\": \"2001-05-01T17:00:00.000+00:00\",\n        \"age\": 22\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "update",
@@ -83,7 +231,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 2,\n    \"name\": \"Jamie Andreaas\",\n    \"birthDate\": \"2000-02-28\"\n}",
+							"raw": "{\n    \"id\": 1,\n    \"name\": \"Riza Dwi Andhika\",\n    \"birthDate\": \"2000-02-28\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -100,7 +248,60 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 1,\n    \"name\": \"Riza Dwi Andhika\",\n    \"birthDate\": \"2000-02-28\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/customers",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 04 Dec 2023 09:51:10 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Data updated\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Riza Dwi Andhika\",\n        \"birthDate\": \"2000-02-28T00:00:00.000+00:00\",\n        \"age\": 23\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "delete",
@@ -108,17 +309,62 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/customers/2",
+							"raw": "{{url}}/customers/10",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"customers",
-								"2"
+								"10"
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/customers/10",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customers",
+										"10"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 04 Dec 2023 09:51:43 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Customer removed\"\n}"
+						}
+					]
 				}
 			]
 		},
