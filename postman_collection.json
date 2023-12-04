@@ -1,0 +1,622 @@
+{
+	"info": {
+		"_postman_id": "cf9f9f5f-a853-475f-a441-ec3df3ce6033",
+		"name": "Live Code Engima",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14304261"
+	},
+	"item": [
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Hanif\",\n    \"birthDate\": \"2016-03-01\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/customers",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/customers?size=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"customers"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/customers/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"customers",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n    \"name\": \"Jamie Andreaas\",\n    \"birthDate\": \"2000-02-28\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/customers",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/customers/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"customers",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "film",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Narnia\",\n    \"duration\": 76,\n    \"showDate\": \"2006-12-01\",\n    \"price\": 40000,\n    \"rating\": {\n        \"id\": 3\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/films",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"films"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/films?size=2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"films"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/films/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"films",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n    \"title\": \"Spiderman\",\n    \"duration\": 55,\n    \"showDate\": \"2002-01-31T17:00:00.000+00:00\",\n    \"price\": 45000,\n    \"rating\": {\n        \"id\": 2\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/films",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"films"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/films/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"films",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "rating",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"A\",\n    \"description\": \"For everyone\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/ratings",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ratings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/ratings?size=2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ratings"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/ratings/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ratings",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"code\": \"D\",\n    \"description\": \"For adults only\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/ratings",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ratings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/ratings/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ratings",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "theater",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"theaterNumber\": \"B002\",\n    \"film\": {\n        \"id\": 2\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/theaters",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"theaters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/theaters?size=2&page=2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"theaters"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "2"
+								},
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/theaters/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"theaters",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 6,\n    \"theaterNumber\": \"B002\",\n    \"stock\": 4,\n    \"film\": {\n        \"id\": 2\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/theaters",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"theaters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/theaters/6",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"theaters",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reserve ticket",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customerId\": 6,\n    \"seatId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/theaters/reserve",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"theaters",
+								"reserve"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "seat",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"seatNumber\": \"SD002\",\n    \"theater\": {\n        \"id\": 5\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/seats",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"seats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/seats?size=3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"seats"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/seats/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"seats",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 3,\n    \"seatNumber\": \"SA0012\",\n    \"theater\": {\n        \"id\": 5\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/seats/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"seats",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/seats/12",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"seats",
+								"12"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
